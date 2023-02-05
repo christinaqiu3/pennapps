@@ -75,13 +75,37 @@ const IndexPage = () => (
       <StaticImage
         src="../images/banner.png"
         loading="eager"
-        width={64}
+        width={1000}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
+        var countDownDate = new Date("Sep 2, 2022 18:00:00").getTime();
+        var update = setInterval(function() {
+          var now = new Date().getTime();
+          var timeleft = countDownDate - now;
+    
+          var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+          
+          document.getElementById("days").innerHTML = days + "d "
+          document.getElementById("hours").innerHTML = hours + "h " 
+          document.getElementById("mins").innerHTML = minutes + "m " 
+          document.getElementById("secs").innerHTML = seconds + "s"
+          
+          if (timeleft < 0) {
+          clearInterval(myfunc);
+          document.getElementById("days").innerHTML = ""
+          document.getElementById("hours").innerHTML = "" 
+          document.getElementById("mins").innerHTML = ""
+          document.getElementById("secs").innerHTML = ""
+          document.getElementById("end").innerHTML = "TIME UP!!";
+          }
+        }, 1000)
         //PENNAPPS XXIII <b> </b> //
       </h1>
       <p className={styles.intro}>
