@@ -81,7 +81,12 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-      <h1>
+      <p id="days"></p>
+      <p id="hours"></p>
+      <p id="mins"></p>
+      <p id="secs"></p>
+      <h2 id="end"></h2>
+      <script>
         var countDownDate = new Date("Sep 2, 2022 18:00:00").getTime();
         var update = setInterval(function() {
           var now = new Date().getTime()//;
@@ -107,7 +112,7 @@ const IndexPage = () => (
           }
         }, 1000)
         //PENNAPPS XXIII <b> </b> //
-      </h1>
+      </script>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
