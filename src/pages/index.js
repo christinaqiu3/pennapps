@@ -73,7 +73,7 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/example.png"
+        src="../images/banner.png"
         loading="eager"
         width={64}
         quality={95}
@@ -81,9 +81,9 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
+      //<h1>
+        //PENNAPPS XXIII //<b>
+      //</h1>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
